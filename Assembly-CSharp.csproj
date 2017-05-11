@@ -46,13 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\IListExtensions.cs" />
-     <Compile Include="Assets\RandomExtensions.cs" />
-     <Compile Include="Assets\SnakeHead.cs" />
-     <Compile Include="Assets\Tuple.cs" />
-     <Compile Include="Assets\TupleExtensions.cs" />
+     <Compile Include="Assets\Scrips\IListExtensions.cs" />
+     <Compile Include="Assets\Scrips\RandomExtensions.cs" />
+     <Compile Include="Assets\Scrips\SnakeHead.cs" />
+     <Compile Include="Assets\Scrips\Tuple.cs" />
+     <Compile Include="Assets\Scrips\TupleExtensions.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Louie/Documents/Snake/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Louie/Repos/Snake/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
