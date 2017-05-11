@@ -3,6 +3,7 @@ using System.Linq;
 using Assets;
 using Assets.Scrips;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SnakeHead : MonoBehaviour
@@ -26,7 +27,7 @@ public class SnakeHead : MonoBehaviour
     void Start()
     {
         SpawnFood();
-        InvokeRepeating("Move", 0.3f, 0.1f);
+        InvokeRepeating("Move", 0.3f, 0.05f);
     }
 
     void Update()
@@ -107,9 +108,17 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
+    bool CrashCausesDead(Collision2D with)
+    {
+        return with.collider.tag == TagHelper.Get("Wall")
+                   //                   || with.collider.tag == TagHelper.Get("SnakeBody")
+                   ;
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("saaa");
-
+        Debug.Log("Crash : " + coll.collider.tag);
+        if (CrashCausesDead(coll))
+            SceneManager.LoadScene("FailScene");
     }
 }
