@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Assets
+namespace Assets.Scrips
 {
     public static class RandomExtensions
     {
